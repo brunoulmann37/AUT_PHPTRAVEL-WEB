@@ -10,8 +10,9 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		features = {"src/test/resources/features/"},
-		glue = {"curso.treinamento.steps"},
-		snippets = SnippetType.CAMELCASE
+		glue = {"curso.treinamento.steps", "curso.treinamento.setup"},
+		tags = {"@LoginInvalido"},
+		snippets = SnippetType.UNDERSCORE
 		)
 
 
